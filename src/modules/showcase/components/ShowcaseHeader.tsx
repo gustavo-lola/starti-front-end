@@ -13,7 +13,7 @@ export function ShowcaseHeader({ totalItems, totalValue, onOpenCart }: ShowcaseH
             <button
                 type="button"
                 onClick={onOpenCart}
-                className="flex w-full items-center justify-center gap-2 rounded-full border border-border bg-background px-4 py-2 hover:bg-muted hover:cursor-pointer sm:w-fit"
+                className="flex w-full items-center justify-center gap-2 rounded-md border border-border bg-background px-4 py-2 hover:bg-muted hover:cursor-pointer sm:w-fit"
             >
                 <CartIcon size={20} className="text-primary" />
                 <span className="text-sm font-semibold text-foreground">{totalItems} item(ns)</span>

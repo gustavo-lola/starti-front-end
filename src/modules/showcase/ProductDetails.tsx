@@ -62,7 +62,7 @@ export default function ProductDetails() {
                     <button
                         type="button"
                         onClick={() => navigate("/vitrine")}
-                        className="w-fit rounded-full hover:cursor-pointer border border-border bg-background px-4 py-2 text-sm font-medium hover:bg-muted"
+                        className="w-fit rounded-md hover:cursor-pointer border border-border bg-background px-4 py-2 text-sm font-medium hover:bg-muted"
                     >
                         Voltar para vitrine
                     </button>
@@ -70,7 +70,7 @@ export default function ProductDetails() {
                     <button
                         type="button"
                         onClick={() => setIsCartSheetOpen(true)}
-                        className="flex w-fit max-w-full items-center gap-2 rounded-full border border-border bg-background px-4 py-2 hover:bg-muted hover:cursor-pointer"
+                        className="flex w-fit max-w-full items-center gap-2 rounded-md border border-border bg-background px-4 py-2 hover:bg-muted hover:cursor-pointer"
                     >
                         <CartIcon size={20} className="text-primary" />
                         <span className="text-sm font-semibold text-foreground">{totalItems} item(ns)</span>
