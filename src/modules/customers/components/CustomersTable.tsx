@@ -1,5 +1,4 @@
 import { formatCurrency, formatDate } from "@/lib/customers-formatters";
-import { Input } from "@/shared/components/ui/input";
 import type { CustomerStatus, CustomersTableProps } from "@/shared/types/customers";
 import { toast } from "react-toastify";
 
@@ -84,9 +83,6 @@ export function CustomersTable({
                 <table className="min-w-[860px] w-full text-left text-sm text-foreground">
                     <thead className="bg-muted/40 text-muted-foreground">
                         <tr>
-                            <th className="w-12 px-4 py-3">
-                                <Input type="checkbox" aria-label="Selecionar todos os clientes" />
-                            </th>
                             <th className="px-4 py-3 font-semibold">Cliente</th>
                             <th className="px-4 py-3 font-semibold">Contato</th>
                             <th className="px-4 py-3 font-semibold">Cidade</th>
@@ -100,9 +96,6 @@ export function CustomersTable({
                     <tbody>
                         {customers.map((customer) => (
                             <tr key={customer.id} className="border-t border-border hover:bg-muted/30">
-                                <td className="px-4 py-4 align-middle">
-                                    <input type="checkbox" aria-label={`Selecionar cliente ${customer.nome}`} />
-                                </td>
                                 <td className="px-4 py-4 align-middle">
                                     <div className="flex items-center gap-3">
                                         <CustomerAvatar name={customer.nome} />

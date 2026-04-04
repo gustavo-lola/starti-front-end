@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useRef, useState, type ChangeEvent, type ReactNode } from "react";
 import { PenToolIcon, type PenToolIconHandle } from "@/components/ui/pen-tool";
 import { atualizarProduto, deletarProduto, listarProdutos } from "@/services/products";
-import { Input } from "@/shared/components/ui/input";
 import type { ProdutoLinha } from "@/shared/mocks/products-mock";
 import type { StatusFiltro } from "@/shared/types/products";
 import type { ProdutoForm } from "@/shared/types/products-sheet";
@@ -283,9 +282,6 @@ export function TabelaRecente() {
                     <table className="min-w-[900px] w-full text-left text-sm text-foreground">
                         <thead className="bg-muted/40 text-muted-foreground">
                             <tr>
-                                <th className="w-12 px-4 py-3">
-                                    <Input type="checkbox" aria-label="Selecionar todos os produtos" />
-                                </th>
                                 <th className="px-4 py-3 font-semibold">Produto</th>
                                 <th className="px-4 py-3 font-semibold">Categoria</th>
                                 <th className="px-4 py-3 font-semibold">Estoque</th>
@@ -299,10 +295,6 @@ export function TabelaRecente() {
                         <tbody>
                             {produtosPaginados.map((produto) => (
                                 <tr key={produto.id} className="border-t border-border hover:bg-muted/30">
-                                    <td className="px-4 py-4 align-middle">
-                                        <Input type="checkbox" aria-label={`Selecionar produto ${produto.nome}`} />
-                                    </td>
-
                                     <td className="px-4 py-4 align-middle">
                                         <div className="flex items-center gap-3">
                                             <ProductAvatar nome={produto.nome} imagem={produto.imagem} />

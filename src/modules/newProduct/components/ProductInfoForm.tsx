@@ -80,8 +80,9 @@ export function ProdutoInformacoesForm({ form, errors, onChange }: ProdutoInform
                         min={0}
                         value={form.estoque}
                         onChange={(event) => onChange("estoque", Number(event.target.value) || 0)}
-                        className="h-10"
+                        className="h-10 no-spinner"
                     />
+
                     {errors.estoque ? <p className="text-xs text-destructive">{errors.estoque}</p> : null}
                 </label>
 
@@ -95,7 +96,7 @@ export function ProdutoInformacoesForm({ form, errors, onChange }: ProdutoInform
                         min={0}
                         value={form.quantidade}
                         onChange={(event) => onChange("quantidade", Number(event.target.value) || 0)}
-                        className="h-10"
+                        className="h-10 no-spinner"
                     />
                     {errors.quantidade ? <p className="text-xs text-destructive">{errors.quantidade}</p> : null}
                 </label>
@@ -111,7 +112,7 @@ export function ProdutoInformacoesForm({ form, errors, onChange }: ProdutoInform
                     onChange={(event) => onChange("descricao", event.target.value)}
                     rows={6}
                     placeholder="Descreva os detalhes tecnicos do produto..."
-                    className="w-full rounded-lg border border-input bg-background px-3 py-3 text-sm text-foreground"
+                    className="w-full resize-none  rounded-lg border border-input bg-background px-3 py-3 text-sm text-foreground outline-none focus-visible:ring-2 focus-visible:ring-green-800"
                 />
                 {errors.descricao ? <p className="text-xs text-destructive">{errors.descricao}</p> : null}
             </label>

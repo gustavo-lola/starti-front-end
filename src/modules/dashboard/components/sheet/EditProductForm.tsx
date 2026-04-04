@@ -162,7 +162,7 @@ export function EditarProdutoForm({ produto, form, setForm }: EditarProdutoFormP
                         value={form.descricao}
                         onChange={(event) => setForm((prev) => ({ ...prev, descricao: event.target.value }))}
                         rows={6}
-                        className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm text-foreground"
+                        className="w-full resize-none rounded-md border border-border bg-background px-3 py-2 text-sm text-foreground focus:ring-2 focus:ring-green-800"
                     />
                 </div>
             )}
