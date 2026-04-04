@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./src/*"],
+            "@/app/*": ["./src/app/*"],
+            "@/modules/*": ["./src/modules/*"],
+            "@/shared/*": ["./src/shared/*"],
+            "@/components/*": ["./src/shared/components/*"],
+            "@/hooks/*": ["./src/shared/hooks/*"],
+            "@/lib/*": ["./src/shared/lib/*"],
+            "@/mocks/*": ["./src/shared/mocks/*"],
+            "@/services/*": ["./src/shared/services/*"],
+            "@/types/*": ["./src/shared/types/*"],
+            "@/pages/*": ["./src/modules/*"]
+        }
+    },
+    "files": [],
+    "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }]
+}
