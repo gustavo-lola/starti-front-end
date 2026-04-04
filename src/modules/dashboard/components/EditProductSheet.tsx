@@ -91,7 +91,7 @@ export default function EditarProdutoSheet({
 
     return (
         <Sheet open={open} onOpenChange={onOpenChange}>
-            <SheetContent side="right" className="w-full max-w-xl border-l border-border p-0">
+            <SheetContent side="right" className="w-full rounded-xl max-w-xl border-l border-border p-0">
                 <div className="flex h-full min-h-0 flex-col">
                     <EditarProdutoHeader produto={produto} onDeletar={handleDeletar} isDeleting={isDeleting} />
 

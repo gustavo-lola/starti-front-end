@@ -4,14 +4,13 @@ export function ProductCard({ product, onOpenProduct, onAddToCart }: ProductCard
     const isOutOfStock = product.quantidade <= 0;
 
     return (
-        <article className="rounded-xl border border-border bg-card p-3 transition-all hover:-translate-y-0.5 hover:shadow-md">
-            <button
-                type="button"
-                onClick={() => onOpenProduct(product.id)}
-                className="mb-3 block w-full overflow-hidden rounded-lg bg-muted hover:cursor-pointer"
-            >
+        <article
+            onClick={() => onOpenProduct(product.id)}
+            className="group cursor-pointer rounded-xl border border-border bg-card p-3 transition-all hover:-translate-y-0.5 hover:shadow-md"
+        >
+            <div className="mb-3 overflow-hidden rounded-lg">
                 <img src={product.imagem} alt={product.nome} className="h-36 w-full object-cover" />
-            </button>
+            </div>
 
             <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">{product.categoria}</p>
             <h3 className="mt-1 text-base font-semibold text-foreground">{product.nome}</h3>
@@ -27,9 +26,12 @@ export function ProductCard({ product, onOpenProduct, onAddToCart }: ProductCard
 
                 <button
                     type="button"
-                    onClick={() => onAddToCart(product.id)}
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        onAddToCart(product.id);
+                    }}
                     disabled={isOutOfStock}
-                    className="rounded-md bg-primary px-3 py-2 text-xs font-medium text-primary-foreground hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50 hover:cursor-pointer"
+                    className="relative z-10 rounded-md bg-primary px-3 py-2 text-xs font-medium text-primary-foreground hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50 hover:cursor-pointer"
                 >
                     Adicionar
                 </button>

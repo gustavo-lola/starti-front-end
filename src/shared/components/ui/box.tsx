@@ -5,7 +5,7 @@ import { motion, useAnimation } from "motion/react";
 import type { HTMLAttributes } from "react";
 import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
 
-import { cn } from "@/lib/classnames";
+import { cn } from "@/shared/lib/classnames";
 
 export interface BoxIconHandle {
   startAnimation: () => void;

@@ -21,7 +21,7 @@ export function CartSheet({
 }: CartSheetProps) {
     return (
         <Sheet open={open} onOpenChange={onOpenChange}>
-            <SheetContent side="right" className="w-full max-w-md border-l border-border">
+            <SheetContent side="right" className="w-full rounded-xl max-w-md border-l border-border">
                 <SheetHeader className="border-b border-border pb-3">
                     <SheetTitle>Carrinho</SheetTitle>
                     <SheetDescription>Revise os itens e simule o checkout.</SheetDescription>
@@ -65,7 +65,7 @@ export function CartSheet({
                                             <button
                                                 type="button"
                                                 onClick={() => onRemoveOne(item.id)}
-                                                className="hover:cursor-pointer rounded border border-border px-2 py-1 text-xs"
+                                                className="hover:cursor-pointer hover:opacity-90 rounded border border-border px-2 py-1 text-xs"
                                             >
                                                 -
                                             </button>
@@ -73,7 +73,7 @@ export function CartSheet({
                                             <button
                                                 type="button"
                                                 onClick={() => onAddOne(item.id)}
-                                                className="hover:cursor-pointer rounded border border-border px-2 py-1 text-xs"
+                                                className="hover:cursor-pointer hover:opacity-90 rounded border border-border px-2 py-1 text-xs"
                                             >
                                                 +
                                             </button>
@@ -92,14 +92,14 @@ export function CartSheet({
                             <button
                                 type="button"
                                 onClick={onClearCart}
-                                className="flex-1 rounded-md border border-border px-3 py-2 text-sm font-medium hover:cursor-pointer"
+                                className="flex-1 hover:opacity-80 rounded-md border border-border px-3 py-2 text-sm font-medium hover:cursor-pointer"
                             >
                                 Limpar
                             </button>
                             <button
                                 type="button"
                                 onClick={onCheckout}
-                                className="flex-1 rounded-md bg-primary px-3 py-2 text-sm font-medium text-primary-foreground hover:cursor-pointer"
+                                className="flex-1 hover:opacity-90 rounded-md bg-primary px-3 py-2 text-sm font-medium text-primary-foreground hover:cursor-pointer"
                             >
                                 Finalizar
                             </button>
